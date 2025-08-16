@@ -79,6 +79,46 @@
                     <code>docker-compose down</code>
                     <p>複数コンテナを一括停止</p>
                 </div>
+                <div class="command-card">
+                    <h3>Docker Composeでbundle install</h3>
+                    <code>docker compose run web bundle install</code>
+                    <p>コンテナ内でGemをインストール</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker ComposeでSorceryインストール</h3>
+                    <code>docker compose run web rails g sorcery:install</code>
+                    <p>Sorcery認証機能をセットアップ</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Compose再起動</h3>
+                    <code>docker compose restart</code>
+                    <p>全コンテナを再起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Composeで開発サーバー起動</h3>
+                    <code>docker compose exec web bin/dev</code>
+                    <p>コンテナ内で開発サーバーを起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Composeでマイグレーション</h3>
+                    <code>docker compose exec web rails db:migrate</code>
+                    <p>コンテナ内でDBマイグレーション実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Composeでマイグレーション状態確認</h3>
+                    <code>docker compose exec web rails db:migrate:status</code>
+                    <p>マイグレーションの適用状態を確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Composeでコントローラー生成</h3>
+                    <code>docker compose exec web rails g controller users</code>
+                    <p>usersコントローラーを生成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Composeでセッションコントローラー生成</h3>
+                    <code>docker compose exec web rails g controller user_sessions</code>
+                    <p>user_sessionsコントローラーを生成</p>
+                </div>
             </div>
         </section>
 
