@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開発コマンド チートシート</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 開発コマンド チートシート</h1>
+        <div class="search-container">
+            <input type="text" id="globalSearch" placeholder="コマンドを検索...">
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul class="menu">
+            <li><a href="#docker" data-category="docker">🐳 Docker</a></li>
+            <li><a href="#gem" data-category="gem">💎 Gem</a></li>
+            <li><a href="#linux" data-category="linux">🐧 Linux</a></li>
+            <li><a href="#git" data-category="git">📦 Git</a></li>
+            <li><a href="#github" data-category="github">🐙 GitHub</a></li>
+            <li><a href="#rails" data-category="rails">🛤️ Rails</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="docker" class="category">
+            <h2>🐳 Docker コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>コンテナ一覧表示</h3>
+                    <code>docker ps</code>
+                    <p>実行中のコンテナを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>すべてのコンテナ表示</h3>
+                    <code>docker ps -a</code>
+                    <p>停止中も含めてすべて表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>イメージ一覧</h3>
+                    <code>docker images</code>
+                    <p>ダウンロード済みのイメージを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コンテナ起動</h3>
+                    <code>docker start [コンテナ名]</code>
+                    <p>停止中のコンテナを起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>コンテナ停止</h3>
+                    <code>docker stop [コンテナ名]</code>
+                    <p>実行中のコンテナを停止</p>
+                </div>
+                <div class="command-card">
+                    <h3>コンテナ削除</h3>
+                    <code>docker rm [コンテナ名]</code>
+                    <p>コンテナを削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>イメージ削除</h3>
+                    <code>docker rmi [イメージ名]</code>
+                    <p>イメージを削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>コンテナ内でコマンド実行</h3>
+                    <code>docker exec -it [コンテナ名] bash</code>
+                    <p>コンテナ内に入る</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Compose起動</h3>
+                    <code>docker-compose up</code>
+                    <p>複数コンテナを一括起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>Docker Compose停止</h3>
+                    <code>docker-compose down</code>
+                    <p>複数コンテナを一括停止</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gem" class="category">
+            <h2>💎 Gem コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>Gemインストール</h3>
+                    <code>gem install [gem名]</code>
+                    <p>特定のGemをインストール</p>
+                </div>
+                <div class="command-card">
+                    <h3>Gemアンインストール</h3>
+                    <code>gem uninstall [gem名]</code>
+                    <p>Gemを削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>インストール済み一覧</h3>
+                    <code>gem list</code>
+                    <p>インストール済みGemの一覧</p>
+                </div>
+                <div class="command-card">
+                    <h3>Gemの更新</h3>
+                    <code>gem update [gem名]</code>
+                    <p>特定のGemを最新版に更新</p>
+                </div>
+                <div class="command-card">
+                    <h3>Bundlerでインストール</h3>
+                    <code>bundle install</code>
+                    <p>Gemfileに記載のGemをインストール</p>
+                </div>
+                <div class="command-card">
+                    <h3>Bundle更新</h3>
+                    <code>bundle update</code>
+                    <p>すべてのGemを更新</p>
+                </div>
+                <div class="command-card">
+                    <h3>Gemの情報表示</h3>
+                    <code>gem info [gem名]</code>
+                    <p>Gemの詳細情報を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>Gemを検索</h3>
+                    <code>gem search [キーワード]</code>
+                    <p>リポジトリからGemを検索</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="linux" class="category">
+            <h2>🐧 Linux コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>ディレクトリ内容表示</h3>
+                    <code>ls</code>
+                    <p>現在のディレクトリのファイル一覧</p>
+                </div>
+                <div class="command-card">
+                    <h3>詳細表示</h3>
+                    <code>ls -la</code>
+                    <p>隠しファイルを含む詳細情報</p>
+                </div>
+                <div class="command-card">
+                    <h3>ディレクトリ移動</h3>
+                    <code>cd [ディレクトリ名]</code>
+                    <p>指定ディレクトリへ移動</p>
+                </div>
+                <div class="command-card">
+                    <h3>現在地表示</h3>
+                    <code>pwd</code>
+                    <p>現在のディレクトリパスを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ディレクトリ作成</h3>
+                    <code>mkdir [ディレクトリ名]</code>
+                    <p>新しいディレクトリを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル削除</h3>
+                    <code>rm [ファイル名]</code>
+                    <p>ファイルを削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>ディレクトリ削除</h3>
+                    <code>rm -rf [ディレクトリ名]</code>
+                    <p>ディレクトリを強制削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイルコピー</h3>
+                    <code>cp [元] [先]</code>
+                    <p>ファイルをコピー</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル移動</h3>
+                    <code>mv [元] [先]</code>
+                    <p>ファイルを移動または名前変更</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル内容表示</h3>
+                    <code>cat [ファイル名]</code>
+                    <p>ファイルの内容を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル検索</h3>
+                    <code>find . -name "[ファイル名]"</code>
+                    <p>ファイルを名前で検索</p>
+                </div>
+                <div class="command-card">
+                    <h3>テキスト検索</h3>
+                    <code>grep "[検索文字]" [ファイル]</code>
+                    <p>ファイル内のテキストを検索</p>
+                </div>
+                <div class="command-card">
+                    <h3>権限変更</h3>
+                    <code>chmod 755 [ファイル名]</code>
+                    <p>ファイルの権限を変更</p>
+                </div>
+                <div class="command-card">
+                    <h3>プロセス表示</h3>
+                    <code>ps aux</code>
+                    <p>実行中のプロセス一覧</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="git" class="category">
+            <h2>📦 Git コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>リポジトリ初期化</h3>
+                    <code>git init</code>
+                    <p>新しいGitリポジトリを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>クローン</h3>
+                    <code>git clone [URL]</code>
+                    <p>リモートリポジトリをコピー</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータス確認</h3>
+                    <code>git status</code>
+                    <p>変更状況を確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル追加</h3>
+                    <code>git add .</code>
+                    <p>すべての変更をステージング</p>
+                </div>
+                <div class="command-card">
+                    <h3>コミット</h3>
+                    <code>git commit -m "メッセージ"</code>
+                    <p>変更を記録</p>
+                </div>
+                <div class="command-card">
+                    <h3>プッシュ</h3>
+                    <code>git push origin main</code>
+                    <p>リモートに送信</p>
+                </div>
+                <div class="command-card">
+                    <h3>プル</h3>
+                    <code>git pull</code>
+                    <p>リモートから取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>ブランチ一覧</h3>
+                    <code>git branch</code>
+                    <p>ブランチの一覧表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ブランチ作成・切替</h3>
+                    <code>git checkout -b [ブランチ名]</code>
+                    <p>新しいブランチを作成して切替</p>
+                </div>
+                <div class="command-card">
+                    <h3>マージ</h3>
+                    <code>git merge [ブランチ名]</code>
+                    <p>ブランチを統合</p>
+                </div>
+                <div class="command-card">
+                    <h3>ログ表示</h3>
+                    <code>git log --oneline</code>
+                    <p>コミット履歴を一行表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>差分表示</h3>
+                    <code>git diff</code>
+                    <p>変更内容を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>取り消し</h3>
+                    <code>git reset --hard HEAD</code>
+                    <p>すべての変更を取り消し</p>
+                </div>
+                <div class="command-card">
+                    <h3>スタッシュ</h3>
+                    <code>git stash</code>
+                    <p>変更を一時保存</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="category">
+            <h2>🐙 GitHub CLI コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>認証</h3>
+                    <code>gh auth login</code>
+                    <p>GitHubにログイン</p>
+                </div>
+                <div class="command-card">
+                    <h3>リポジトリ作成</h3>
+                    <code>gh repo create [名前]</code>
+                    <p>新しいリポジトリを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>リポジトリクローン</h3>
+                    <code>gh repo clone [リポジトリ]</code>
+                    <p>リポジトリをクローン</p>
+                </div>
+                <div class="command-card">
+                    <h3>PR作成</h3>
+                    <code>gh pr create</code>
+                    <p>プルリクエストを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>PR一覧</h3>
+                    <code>gh pr list</code>
+                    <p>プルリクエスト一覧</p>
+                </div>
+                <div class="command-card">
+                    <h3>Issue作成</h3>
+                    <code>gh issue create</code>
+                    <p>新しいIssueを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Issue一覧</h3>
+                    <code>gh issue list</code>
+                    <p>Issue一覧を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ワークフロー実行</h3>
+                    <code>gh workflow run [名前]</code>
+                    <p>GitHub Actionsを実行</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="rails" class="category">
+            <h2>🛤️ Rails コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>新規アプリ作成</h3>
+                    <code>rails new [アプリ名]</code>
+                    <p>新しいRailsアプリを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>サーバー起動</h3>
+                    <code>rails server</code>
+                    <p>開発サーバーを起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>コンソール起動</h3>
+                    <code>rails console</code>
+                    <p>Railsコンソールを起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>DB作成</h3>
+                    <code>rails db:create</code>
+                    <p>データベースを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>マイグレーション実行</h3>
+                    <code>rails db:migrate</code>
+                    <p>DBマイグレーションを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>ロールバック</h3>
+                    <code>rails db:rollback</code>
+                    <p>マイグレーションを戻す</p>
+                </div>
+                <div class="command-card">
+                    <h3>シード実行</h3>
+                    <code>rails db:seed</code>
+                    <p>初期データを投入</p>
+                </div>
+                <div class="command-card">
+                    <h3>モデル生成</h3>
+                    <code>rails g model [モデル名]</code>
+                    <p>新しいモデルを生成</p>
+                </div>
+                <div class="command-card">
+                    <h3>コントローラー生成</h3>
+                    <code>rails g controller [名前]</code>
+                    <p>新しいコントローラーを生成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Scaffold生成</h3>
+                    <code>rails g scaffold [名前]</code>
+                    <p>CRUD機能を一括生成</p>
+                </div>
+                <div class="command-card">
+                    <h3>ルート確認</h3>
+                    <code>rails routes</code>
+                    <p>ルーティング一覧を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>テスト実行</h3>
+                    <code>rails test</code>
+                    <p>テストスイートを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>アセットプリコンパイル</h3>
+                    <code>rails assets:precompile</code>
+                    <p>アセットをコンパイル</p>
+                </div>
+                <div class="command-card">
+                    <h3>キャッシュクリア</h3>
+                    <code>rails tmp:clear</code>
+                    <p>一時ファイルをクリア</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
