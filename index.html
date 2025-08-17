@@ -22,6 +22,14 @@
             <li><a href="#git" data-category="git">📦 Git</a></li>
             <li><a href="#github" data-category="github">🐙 GitHub</a></li>
             <li><a href="#rails" data-category="rails">🛤️ Rails</a></li>
+            <li><a href="#ruby" data-category="ruby">💎 Ruby</a></li>
+            <li><a href="#gem-library" data-category="gem-library">📚 Gem Library</a></li>
+            <li><a href="#mvc" data-category="mvc">🏗️ MVC パターン</a></li>
+            <li><a href="#debug" data-category="debug">🐛 デバッグ</a></li>
+            <li><a href="#database" data-category="database">🗄️ データベース</a></li>
+            <li><a href="#testing" data-category="testing">🧪 テスト</a></li>
+            <li><a href="#performance" data-category="performance">⚡ パフォーマンス</a></li>
+            <li><a href="#errors" data-category="errors">🚨 エラーパターン</a></li>
         </ul>
     </nav>
 
@@ -438,6 +446,774 @@
                     <h3>キャッシュクリア</h3>
                     <code>rails tmp:clear</code>
                     <p>一時ファイルをクリア</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ruby" class="category">
+            <h2>💎 Ruby メソッド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>配列の要素数取得</h3>
+                    <code>array.length</code>
+                    <p>配列の要素数を取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>配列への要素追加</h3>
+                    <code>array.push(element)</code>
+                    <p>配列の末尾に要素を追加</p>
+                </div>
+                <div class="command-card">
+                    <h3>配列から要素削除</h3>
+                    <code>array.pop</code>
+                    <p>配列の末尾から要素を削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>配列の反復処理</h3>
+                    <code>array.each { |item| ... }</code>
+                    <p>配列の各要素に対して処理を実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>配列のマップ処理</h3>
+                    <code>array.map { |item| ... }</code>
+                    <p>配列を変換して新しい配列を作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>配列のフィルタリング</h3>
+                    <code>array.select { |item| ... }</code>
+                    <p>条件に合う要素だけを抽出</p>
+                </div>
+                <div class="command-card">
+                    <h3>配列のソート</h3>
+                    <code>array.sort</code>
+                    <p>配列を昇順にソート</p>
+                </div>
+                <div class="command-card">
+                    <h3>文字列の長さ取得</h3>
+                    <code>string.length</code>
+                    <p>文字列の文字数を取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>文字列を大文字に</h3>
+                    <code>string.upcase</code>
+                    <p>文字列を大文字に変換</p>
+                </div>
+                <div class="command-card">
+                    <h3>文字列を小文字に</h3>
+                    <code>string.downcase</code>
+                    <p>文字列を小文字に変換</p>
+                </div>
+                <div class="command-card">
+                    <h3>文字列の分割</h3>
+                    <code>string.split(',')</code>
+                    <p>文字列を指定文字で分割</p>
+                </div>
+                <div class="command-card">
+                    <h3>文字列の結合</h3>
+                    <code>array.join(',')</code>
+                    <p>配列を文字列に結合</p>
+                </div>
+                <div class="command-card">
+                    <h3>文字列の置換</h3>
+                    <code>string.gsub('old', 'new')</code>
+                    <p>文字列内の文字を置換</p>
+                </div>
+                <div class="command-card">
+                    <h3>ハッシュのキー取得</h3>
+                    <code>hash.keys</code>
+                    <p>ハッシュのすべてのキーを取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>ハッシュの値取得</h3>
+                    <code>hash.values</code>
+                    <p>ハッシュのすべての値を取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>ハッシュの反復処理</h3>
+                    <code>hash.each { |k, v| ... }</code>
+                    <p>ハッシュの各要素を処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル読み込み</h3>
+                    <code>File.read('filename')</code>
+                    <p>ファイル全体を読み込み</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル書き込み</h3>
+                    <code>File.write('filename', data)</code>
+                    <p>ファイルにデータを書き込み</p>
+                </div>
+                <div class="command-card">
+                    <h3>ディレクトリ存在確認</h3>
+                    <code>Dir.exist?('path')</code>
+                    <p>ディレクトリの存在を確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>時間の取得</h3>
+                    <code>Time.now</code>
+                    <p>現在時刻を取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>クラスの定義</h3>
+                    <code>class ClassName ... end</code>
+                    <p>新しいクラスを定義</p>
+                </div>
+                <div class="command-card">
+                    <h3>メソッドの定義</h3>
+                    <code>def method_name ... end</code>
+                    <p>新しいメソッドを定義</p>
+                </div>
+                <div class="command-card">
+                    <h3>例外処理</h3>
+                    <code>begin ... rescue ... end</code>
+                    <p>エラーをキャッチして処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>条件分岐</h3>
+                    <code>if condition ... else ... end</code>
+                    <p>条件による処理の分岐</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gem-library" class="category">
+            <h2>📚 主要Gemライブラリ</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>Devise - 認証</h3>
+                    <code>gem 'devise'</code>
+                    <p>ユーザー認証機能を提供</p>
+                </div>
+                <div class="command-card">
+                    <h3>Sorcery - 認証</h3>
+                    <code>gem 'sorcery'</code>
+                    <p>シンプルな認証機能を提供</p>
+                </div>
+                <div class="command-card">
+                    <h3>Pundit - 認可</h3>
+                    <code>gem 'pundit'</code>
+                    <p>ポリシーベースの認可管理</p>
+                </div>
+                <div class="command-card">
+                    <h3>CarrierWave - ファイルアップロード</h3>
+                    <code>gem 'carrierwave'</code>
+                    <p>ファイルアップロード機能</p>
+                </div>
+                <div class="command-card">
+                    <h3>Kaminari - ページネーション</h3>
+                    <code>gem 'kaminari'</code>
+                    <p>ページネーション機能を追加</p>
+                </div>
+                <div class="command-card">
+                    <h3>Ransack - 検索</h3>
+                    <code>gem 'ransack'</code>
+                    <p>高度な検索機能を提供</p>
+                </div>
+                <div class="command-card">
+                    <h3>Sidekiq - バックグラウンドジョブ</h3>
+                    <code>gem 'sidekiq'</code>
+                    <p>非同期ジョブ処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>RSpec - テスト</h3>
+                    <code>gem 'rspec-rails'</code>
+                    <p>BDDテストフレームワーク</p>
+                </div>
+                <div class="command-card">
+                    <h3>FactoryBot - テストデータ</h3>
+                    <code>gem 'factory_bot_rails'</code>
+                    <p>テスト用データの生成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Faker - ダミーデータ</h3>
+                    <code>gem 'faker'</code>
+                    <p>リアルなダミーデータを生成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Pry - デバッグ</h3>
+                    <code>gem 'pry-rails'</code>
+                    <p>強力なデバッグツール</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rubocop - コード検査</h3>
+                    <code>gem 'rubocop'</code>
+                    <p>コードスタイルチェッカー</p>
+                </div>
+                <div class="command-card">
+                    <h3>Slim - テンプレート</h3>
+                    <code>gem 'slim-rails'</code>
+                    <p>軽量テンプレート言語</p>
+                </div>
+                <div class="command-card">
+                    <h3>Bootstrap - UI</h3>
+                    <code>gem 'bootstrap'</code>
+                    <p>レスポンシブUIフレームワーク</p>
+                </div>
+                <div class="command-card">
+                    <h3>Draper - デコレーター</h3>
+                    <code>gem 'draper'</code>
+                    <p>ビューロジックの分離</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveAdmin - 管理画面</h3>
+                    <code>gem 'activeadmin'</code>
+                    <p>管理画面を簡単に作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Paperclip - ファイル管理</h3>
+                    <code>gem 'paperclip'</code>
+                    <p>ファイル添付機能</p>
+                </div>
+                <div class="command-card">
+                    <h3>Grape - API</h3>
+                    <code>gem 'grape'</code>
+                    <p>RESTful API構築フレームワーク</p>
+                </div>
+                <div class="command-card">
+                    <h3>JWT - トークン認証</h3>
+                    <code>gem 'jwt'</code>
+                    <p>JSON Web Token認証</p>
+                </div>
+                <div class="command-card">
+                    <h3>Redis - キャッシュ</h3>
+                    <code>gem 'redis'</code>
+                    <p>高速キャッシュストア</p>
+                </div>
+                <div class="command-card">
+                    <h3>Whenever - Cron管理</h3>
+                    <code>gem 'whenever'</code>
+                    <p>Cronジョブの管理</p>
+                </div>
+                <div class="command-card">
+                    <h3>Letter Opener - メール確認</h3>
+                    <code>gem 'letter_opener'</code>
+                    <p>開発環境でメールを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>Dotenv - 環境変数</h3>
+                    <code>gem 'dotenv-rails'</code>
+                    <p>環境変数の管理</p>
+                </div>
+                <div class="command-card">
+                    <h3>I18n - 国際化</h3>
+                    <code>gem 'rails-i18n'</code>
+                    <p>多言語対応機能</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mvc" class="category">
+            <h2>🏗️ Rails MVC パターン詳解</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>Model - Active Record基本</h3>
+                    <code>class User < ApplicationRecord</code>
+                    <p>データベースとの対話を担当するモデル層</p>
+                </div>
+                <div class="command-card">
+                    <h3>Model - バリデーション</h3>
+                    <code>validates :email, presence: true</code>
+                    <p>データの整合性を保証する検証ルール</p>
+                </div>
+                <div class="command-card">
+                    <h3>Model - アソシエーション</h3>
+                    <code>has_many :posts</code>
+                    <p>モデル間の関連付けを定義</p>
+                </div>
+                <div class="command-card">
+                    <h3>Model - スコープ</h3>
+                    <code>scope :active, -> { where(active: true) }</code>
+                    <p>よく使うクエリを再利用可能に</p>
+                </div>
+                <div class="command-card">
+                    <h3>Model - コールバック</h3>
+                    <code>before_save :normalize_email</code>
+                    <p>特定のタイミングで処理を実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>Controller - 基本構造</h3>
+                    <code>class UsersController < ApplicationController</code>
+                    <p>リクエストを処理しレスポンスを返す</p>
+                </div>
+                <div class="command-card">
+                    <h3>Controller - RESTfulアクション</h3>
+                    <code>def index; @users = User.all; end</code>
+                    <p>7つの基本アクション(index,show,new,create,edit,update,destroy)</p>
+                </div>
+                <div class="command-card">
+                    <h3>Controller - Strong Parameters</h3>
+                    <code>params.require(:user).permit(:name, :email)</code>
+                    <p>セキュアなパラメータ処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>Controller - フィルター</h3>
+                    <code>before_action :authenticate_user!</code>
+                    <p>アクション実行前後の処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>View - ERBテンプレート</h3>
+                    <code><%= @user.name %></code>
+                    <p>動的なHTMLを生成するテンプレート</p>
+                </div>
+                <div class="command-card">
+                    <h3>View - パーシャル</h3>
+                    <code><%= render 'shared/header' %></code>
+                    <p>ビューの再利用可能な部品</p>
+                </div>
+                <div class="command-card">
+                    <h3>View - ヘルパーメソッド</h3>
+                    <code><%= link_to 'Home', root_path %></code>
+                    <p>ビューで使える便利なメソッド</p>
+                </div>
+                <div class="command-card">
+                    <h3>View - フォームヘルパー</h3>
+                    <code><%= form_with model: @user %></code>
+                    <p>フォーム作成を簡単に</p>
+                </div>
+                <div class="command-card">
+                    <h3>Routes - リソースルート</h3>
+                    <code>resources :users</code>
+                    <p>RESTfulなルーティングを一括定義</p>
+                </div>
+                <div class="command-card">
+                    <h3>Routes - ネストしたルート</h3>
+                    <code>resources :users do\n  resources :posts\nend</code>
+                    <p>階層的なURL構造を定義</p>
+                </div>
+                <div class="command-card">
+                    <h3>Migration - テーブル作成</h3>
+                    <code>create_table :users do |t|</code>
+                    <p>データベーステーブルの作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>Migration - カラム追加</h3>
+                    <code>add_column :users, :age, :integer</code>
+                    <p>既存テーブルにカラムを追加</p>
+                </div>
+                <div class="command-card">
+                    <h3>Migration - インデックス追加</h3>
+                    <code>add_index :users, :email</code>
+                    <p>検索パフォーマンスを向上</p>
+                </div>
+                <div class="command-card">
+                    <h3>Active Record - クエリメソッド</h3>
+                    <code>User.where(active: true).order(:name)</code>
+                    <p>データベースクエリの構築</p>
+                </div>
+                <div class="command-card">
+                    <h3>Active Record - N+1問題対策</h3>
+                    <code>User.includes(:posts)</code>
+                    <p>関連データを効率的に取得</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="debug" class="category">
+            <h2>🐛 Rails デバッグツール</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>binding.pry挿入</h3>
+                    <code>binding.pry</code>
+                    <p>コードの実行を一時停止してデバッグ</p>
+                </div>
+                <div class="command-card">
+                    <h3>byebugデバッガー</h3>
+                    <code>byebug</code>
+                    <p>ブレークポイントを設定</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rails.logger出力</h3>
+                    <code>Rails.logger.debug "変数: #{@variable}"</code>
+                    <p>ログファイルにデバッグ情報を出力</p>
+                </div>
+                <div class="command-card">
+                    <h3>コンソールでSQL確認</h3>
+                    <code>User.all.to_sql</code>
+                    <p>発行されるSQLクエリを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>better_errorsエラー画面</h3>
+                    <code>gem 'better_errors'</code>
+                    <p>エラー画面を見やすく改善</p>
+                </div>
+                <div class="command-card">
+                    <h3>rails consoleでデバッグ</h3>
+                    <code>rails c --sandbox</code>
+                    <p>サンドボックスモードで安全にテスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>ログレベル変更</h3>
+                    <code>config.log_level = :debug</code>
+                    <p>詳細なログ情報を出力</p>
+                </div>
+                <div class="command-card">
+                    <h3>Bullet - N+1検出</h3>
+                    <code>gem 'bullet'</code>
+                    <p>N+1問題を自動検出</p>
+                </div>
+                <div class="command-card">
+                    <h3>rack-mini-profiler</h3>
+                    <code>gem 'rack-mini-profiler'</code>
+                    <p>ページ読み込み時間を分析</p>
+                </div>
+                <div class="command-card">
+                    <h3>chrome_logger</h3>
+                    <code>ChromeLogger.debug(variable)</code>
+                    <p>ブラウザコンソールにログ出力</p>
+                </div>
+                <div class="command-card">
+                    <h3>エラーバックトレース</h3>
+                    <code>puts caller</code>
+                    <p>メソッド呼び出し履歴を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>オブジェクト詳細表示</h3>
+                    <code>pp @user</code>
+                    <p>オブジェクトを見やすく表示</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="database" class="category">
+            <h2>🗄️ データベース操作</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>DB接続確認</h3>
+                    <code>rails db:version</code>
+                    <p>現在のDBバージョンを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>DBリセット</h3>
+                    <code>rails db:reset</code>
+                    <p>DBを削除して再作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>DBスキーマ読み込み</h3>
+                    <code>rails db:schema:load</code>
+                    <p>schema.rbからDBを構築</p>
+                </div>
+                <div class="command-card">
+                    <h3>DBシード実行</h3>
+                    <code>rails db:seed:replant</code>
+                    <p>データを削除してシード再実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>特定マイグレーション実行</h3>
+                    <code>rails db:migrate:up VERSION=20231201</code>
+                    <p>特定のマイグレーションを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>マイグレーション状態確認</h3>
+                    <code>rails db:migrate:status</code>
+                    <p>各マイグレーションの適用状態</p>
+                </div>
+                <div class="command-card">
+                    <h3>DBコンソール起動</h3>
+                    <code>rails dbconsole</code>
+                    <p>データベースのCLIに接続</p>
+                </div>
+                <div class="command-card">
+                    <h3>DBダンプ作成</h3>
+                    <code>rails db:schema:dump</code>
+                    <p>現在のDBスキーマを出力</p>
+                </div>
+                <div class="command-card">
+                    <h3>PostgreSQL接続</h3>
+                    <code>psql -d database_name</code>
+                    <p>PostgreSQLコンソールに接続</p>
+                </div>
+                <div class="command-card">
+                    <h3>MySQL接続</h3>
+                    <code>mysql -u root -p database_name</code>
+                    <p>MySQLコンソールに接続</p>
+                </div>
+                <div class="command-card">
+                    <h3>SQLite3接続</h3>
+                    <code>sqlite3 db/development.sqlite3</code>
+                    <p>SQLite3データベースに接続</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveRecord SQL実行</h3>
+                    <code>ActiveRecord::Base.connection.execute("SQL")</code>
+                    <p>生SQLを直接実行</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testing" class="category">
+            <h2>🧪 テスト関連</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>全テスト実行</h3>
+                    <code>rails test</code>
+                    <p>すべてのテストを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>特定テスト実行</h3>
+                    <code>rails test test/models/user_test.rb</code>
+                    <p>特定のテストファイルを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>RSpec実行</h3>
+                    <code>bundle exec rspec</code>
+                    <p>RSpecテストを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>特定スペック実行</h3>
+                    <code>rspec spec/models/user_spec.rb:10</code>
+                    <p>特定の行のテストを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>テストDB準備</h3>
+                    <code>rails db:test:prepare</code>
+                    <p>テスト用DBを準備</p>
+                </div>
+                <div class="command-card">
+                    <h3>カバレッジ確認</h3>
+                    <code>open coverage/index.html</code>
+                    <p>テストカバレッジレポートを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>Factory作成</h3>
+                    <code>FactoryBot.create(:user)</code>
+                    <p>テストデータを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>システムテスト実行</h3>
+                    <code>rails test:system</code>
+                    <p>ブラウザを使った統合テスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>並列テスト実行</h3>
+                    <code>rails test -j 4</code>
+                    <p>4つのプロセスで並列実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>Guard自動テスト</h3>
+                    <code>bundle exec guard</code>
+                    <p>ファイル変更を監視して自動テスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>テストのみ実行（失敗のみ）</h3>
+                    <code>rspec --only-failures</code>
+                    <p>前回失敗したテストのみ実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>テストのシード値固定</h3>
+                    <code>rspec --seed 12345</code>
+                    <p>ランダムテストの順序を固定</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="performance" class="category">
+            <h2>⚡ パフォーマンス最適化</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>クエリ最適化 - includes</h3>
+                    <code>User.includes(:posts, :comments)</code>
+                    <p>N+1問題を防ぐEager Loading</p>
+                </div>
+                <div class="command-card">
+                    <h3>クエリ最適化 - select</h3>
+                    <code>User.select(:id, :name)</code>
+                    <p>必要なカラムのみ取得</p>
+                </div>
+                <div class="command-card">
+                    <h3>バッチ処理</h3>
+                    <code>User.find_each(batch_size: 1000)</code>
+                    <p>大量データを分割処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>キャッシュ - ページ</h3>
+                    <code>caches_page :index</code>
+                    <p>ページ全体をキャッシュ</p>
+                </div>
+                <div class="command-card">
+                    <h3>キャッシュ - フラグメント</h3>
+                    <code><% cache @user do %></code>
+                    <p>ビューの一部をキャッシュ</p>
+                </div>
+                <div class="command-card">
+                    <h3>キャッシュ - ロシアンドール</h3>
+                    <code>cache [@user, @post]</code>
+                    <p>ネストしたキャッシュ戦略</p>
+                </div>
+                <div class="command-card">
+                    <h3>Redis キャッシュ</h3>
+                    <code>Rails.cache.fetch("key") { ... }</code>
+                    <p>Redisを使った高速キャッシュ</p>
+                </div>
+                <div class="command-card">
+                    <h3>アセット圧縮</h3>
+                    <code>config.assets.js_compressor = :uglifier</code>
+                    <p>JavaScriptファイルを圧縮</p>
+                </div>
+                <div class="command-card">
+                    <h3>画像最適化</h3>
+                    <code>image_tag "photo.jpg", loading: "lazy"</code>
+                    <p>画像の遅延読み込み</p>
+                </div>
+                <div class="command-card">
+                    <h3>データベースインデックス</h3>
+                    <code>add_index :users, [:email, :created_at]</code>
+                    <p>複合インデックスで検索高速化</p>
+                </div>
+                <div class="command-card">
+                    <h3>カウンターキャッシュ</h3>
+                    <code>counter_cache: true</code>
+                    <p>関連レコード数をキャッシュ</p>
+                </div>
+                <div class="command-card">
+                    <h3>Webpacker最適化</h3>
+                    <code>rails webpacker:compile</code>
+                    <p>本番用にアセットを最適化</p>
+                </div>
+                <div class="command-card">
+                    <h3>Turbo使用</h3>
+                    <code>data: { turbo: true }</code>
+                    <p>SPAのような高速画面遷移</p>
+                </div>
+                <div class="command-card">
+                    <h3>CDN設定</h3>
+                    <code>config.action_controller.asset_host</code>
+                    <p>静的ファイルをCDNから配信</p>
+                </div>
+                <div class="command-card">
+                    <h3>プロファイリング</h3>
+                    <code>ruby-prof</code>
+                    <p>コードの実行時間を詳細分析</p>
+                </div>
+                <div class="command-card">
+                    <h3>メモリ使用量確認</h3>
+                    <code>memory_profiler</code>
+                    <p>メモリリークを検出</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="errors" class="category">
+            <h2>🚨 よくあるエラーパターンと解決法</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>NoMethodError</h3>
+                    <code>undefined method 'name' for nil:NilClass</code>
+                    <p>nilオブジェクトにメソッドを呼び出し。&.演算子やif文で対処</p>
+                </div>
+                <div class="command-card">
+                    <h3>NameError</h3>
+                    <code>uninitialized constant User</code>
+                    <p>クラスが定義されていない。ファイル名とクラス名の確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>SyntaxError</h3>
+                    <code>unexpected end-of-input</code>
+                    <p>endの不足やカッコの不一致。インデントを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveRecord::RecordNotFound</h3>
+                    <code>Couldn't find User with 'id'=1</code>
+                    <p>存在しないレコード。find_byやrescueで対処</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveRecord::RecordInvalid</h3>
+                    <code>Validation failed: Email can't be blank</code>
+                    <p>バリデーションエラー。save!の代わりにsaveを使用</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActionController::ParameterMissing</h3>
+                    <code>param is missing or empty: user</code>
+                    <p>必須パラメータ不足。Strong Parametersを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActionView::MissingTemplate</h3>
+                    <code>Missing template users/index</code>
+                    <p>ビューファイルが存在しない。ファイルパスを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>LoadError</h3>
+                    <code>cannot load such file -- bcrypt</code>
+                    <p>Gemが見つからない。bundle installを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>PG::ConnectionBad</h3>
+                    <code>could not connect to server</code>
+                    <p>PostgreSQLが起動していない。brew services start postgresql</p>
+                </div>
+                <div class="command-card">
+                    <h3>Mysql2::Error::ConnectionError</h3>
+                    <code>Can't connect to MySQL server</code>
+                    <p>MySQLが起動していない。sudo service mysql start</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveRecord::PendingMigrationError</h3>
+                    <code>Migrations are pending</code>
+                    <p>未実行のマイグレーション。rails db:migrateを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveRecord::StatementInvalid</h3>
+                    <code>SQLite3::SQLException: no such column</code>
+                    <p>カラムが存在しない。マイグレーションファイルを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActionController::InvalidAuthenticityToken</h3>
+                    <code>Can't verify CSRF token</code>
+                    <p>CSRFトークンエラー。フォームにcsrf_meta_tagsを追加</p>
+                </div>
+                <div class="command-card">
+                    <h3>Net::ReadTimeout</h3>
+                    <code>execution expired</code>
+                    <p>タイムアウト。タイムアウト時間を延長またはリトライ処理</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveRecord::DuplicateEntry</h3>
+                    <code>Duplicate entry for key 'index_users_on_email'</code>
+                    <p>一意制約違反。データの重複を確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>ArgumentError</h3>
+                    <code>wrong number of arguments (given 2, expected 1)</code>
+                    <p>引数の数が違う。メソッド定義を確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>TypeError</h3>
+                    <code>no implicit conversion of Symbol into Integer</code>
+                    <p>型の不一致。配列とハッシュの混同を確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>Bundler::GemNotFound</h3>
+                    <code>Could not find gem 'rails'</code>
+                    <p>Gemが見つからない。bundle installを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>Webpacker::Manifest::MissingEntryError</h3>
+                    <code>Can't find application.js in manifest.json</code>
+                    <p>Webpackerコンパイルエラー。rails webpacker:compileを実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveStorage::FileNotFoundError</h3>
+                    <code>Could not find file</code>
+                    <p>アップロードファイルが見つからない。ストレージを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>Redis::CannotConnectError</h3>
+                    <code>Error connecting to Redis</code>
+                    <p>Redisが起動していない。redis-serverを起動</p>
+                </div>
+                <div class="command-card">
+                    <h3>Errno::EADDRINUSE</h3>
+                    <code>Address already in use - bind(2) port 3000</code>
+                    <p>ポートが使用中。lsof -i:3000でプロセスを確認してkill</p>
+                </div>
+                <div class="command-card">
+                    <h3>ActiveJob::DeserializationError</h3>
+                    <code>Error while trying to deserialize arguments</code>
+                    <p>ジョブの引数エラー。GlobalIDを使用またはIDを渡す</p>
+                </div>
+                <div class="command-card">
+                    <h3>StandardError - カスタムエラー処理</h3>
+                    <code>rescue StandardError => e</code>
+                    <p>汎用的なエラーキャッチ。ログ出力して適切に処理</p>
                 </div>
             </div>
         </section>
