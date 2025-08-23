@@ -31,6 +31,7 @@
             <li><a href="#performance" data-category="performance">⚡ パフォーマンス</a></li>
             <li><a href="#errors" data-category="errors">🚨 エラーパターン</a></li>
             <li><a href="#linux-git" data-category="linux-git">🔄 Linux/Git対応表</a></li>
+            <li><a href="#http" data-category="http">🌐 HTTPメソッド</a></li>
         </ul>
     </nav>
 
@@ -1421,6 +1422,222 @@
                     <h3>フィールド抽出</h3>
                     <code>cut → git log --oneline</code>
                     <p>Linuxは列抽出、Gitは簡潔なログ表示</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="http" class="category">
+            <h2>🌐 HTTPメソッド・コマンド</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>GET - データ取得</h3>
+                    <code>curl -X GET https://api.example.com/users</code>
+                    <p>サーバーからデータを取得。リソースの読み取り専用</p>
+                </div>
+                <div class="command-card">
+                    <h3>POST - データ作成</h3>
+                    <code>curl -X POST -d '{"name":"John"}' https://api.example.com/users</code>
+                    <p>新しいリソースを作成。サーバーにデータを送信</p>
+                </div>
+                <div class="command-card">
+                    <h3>PUT - データ更新（全体）</h3>
+                    <code>curl -X PUT -d '{"name":"Jane"}' https://api.example.com/users/1</code>
+                    <p>既存リソース全体を置き換え。完全な更新</p>
+                </div>
+                <div class="command-card">
+                    <h3>PATCH - データ更新（部分）</h3>
+                    <code>curl -X PATCH -d '{"email":"new@example.com"}' https://api.example.com/users/1</code>
+                    <p>既存リソースの一部を更新。部分的な変更</p>
+                </div>
+                <div class="command-card">
+                    <h3>DELETE - データ削除</h3>
+                    <code>curl -X DELETE https://api.example.com/users/1</code>
+                    <p>指定したリソースを削除。サーバーから完全に削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>HEAD - ヘッダー取得</h3>
+                    <code>curl -I https://api.example.com/users</code>
+                    <p>レスポンスヘッダーのみ取得。ボディなし</p>
+                </div>
+                <div class="command-card">
+                    <h3>OPTIONS - 許可メソッド確認</h3>
+                    <code>curl -X OPTIONS https://api.example.com/users</code>
+                    <p>サーバーがサポートするHTTPメソッドを確認</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - 基本的なGETリクエスト</h3>
+                    <code>curl https://api.example.com/data</code>
+                    <p>最もシンプルなHTTPリクエスト実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - ヘッダー付きリクエスト</h3>
+                    <code>curl -H "Authorization: Bearer token" https://api.example.com</code>
+                    <p>認証トークンなどのヘッダーを追加</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - JSONデータ送信</h3>
+                    <code>curl -H "Content-Type: application/json" -d '{"key":"value"}' https://api.example.com</code>
+                    <p>JSON形式でデータを送信</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - フォームデータ送信</h3>
+                    <code>curl -X POST -F "name=value" -F "file=@path/to/file" https://api.example.com</code>
+                    <p>フォーム形式でデータとファイルを送信</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - Basic認証</h3>
+                    <code>curl -u username:password https://api.example.com</code>
+                    <p>Basic認証でアクセス</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - クッキー送信</h3>
+                    <code>curl -b "session=abc123" https://api.example.com</code>
+                    <p>クッキーを含めてリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - クッキー保存</h3>
+                    <code>curl -c cookies.txt https://api.example.com/login</code>
+                    <p>レスポンスのクッキーをファイルに保存</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - タイムアウト設定</h3>
+                    <code>curl --connect-timeout 10 --max-time 30 https://api.example.com</code>
+                    <p>接続と全体のタイムアウトを設定</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - リダイレクト追跡</h3>
+                    <code>curl -L https://api.example.com</code>
+                    <p>リダイレクトを自動的に追跡</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - プロキシ経由</h3>
+                    <code>curl -x http://proxy:8080 https://api.example.com</code>
+                    <p>プロキシサーバー経由でアクセス</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - SSL証明書検証スキップ</h3>
+                    <code>curl -k https://api.example.com</code>
+                    <p>開発環境でSSL証明書の検証をスキップ</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - レスポンスを整形</h3>
+                    <code>curl https://api.example.com/data | jq</code>
+                    <p>JSONレスポンスを見やすく整形</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - ファイルダウンロード</h3>
+                    <code>curl -O https://example.com/file.pdf</code>
+                    <p>ファイルをダウンロードして保存</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - 詳細情報表示</h3>
+                    <code>curl -v https://api.example.com</code>
+                    <p>リクエスト/レスポンスの詳細を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>curl - 静かモード</h3>
+                    <code>curl -s https://api.example.com</code>
+                    <p>進捗バーなどを非表示にして実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>HTTPie - GET</h3>
+                    <code>http GET api.example.com/users</code>
+                    <p>HTTPieを使った見やすいGETリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>HTTPie - POST</h3>
+                    <code>http POST api.example.com/users name="John" age=30</code>
+                    <p>HTTPieでJSON形式のPOSTリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>wget - ファイル取得</h3>
+                    <code>wget https://example.com/file.zip</code>
+                    <p>ファイルをダウンロード</p>
+                </div>
+                <div class="command-card">
+                    <h3>wget - 再帰的ダウンロード</h3>
+                    <code>wget -r https://example.com/docs/</code>
+                    <p>ディレクトリ全体を再帰的にダウンロード</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rails - HTTPリクエスト（Net::HTTP）</h3>
+                    <code>Net::HTTP.get(URI('https://api.example.com/data'))</code>
+                    <p>RubyのNet::HTTPライブラリでGETリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rails - HTTParty gem</h3>
+                    <code>HTTParty.get('https://api.example.com/users')</code>
+                    <p>HTTParty gemを使った簡単なHTTPリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rails - Faraday gem</h3>
+                    <code>Faraday.get('https://api.example.com/data')</code>
+                    <p>Faraday gemでHTTPリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rails - RestClient gem</h3>
+                    <code>RestClient.get 'https://api.example.com/users'</code>
+                    <p>RestClient gemでシンプルなAPI呼び出し</p>
+                </div>
+                <div class="command-card">
+                    <h3>Rails - API認証付きリクエスト</h3>
+                    <code>HTTParty.get(url, headers: { 'Authorization' => "Bearer #{token}" })</code>
+                    <p>認証トークン付きのAPIリクエスト</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 200 OK</h3>
+                    <code>HTTP/1.1 200 OK</code>
+                    <p>リクエスト成功。正常にデータを返す</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 201 Created</h3>
+                    <code>HTTP/1.1 201 Created</code>
+                    <p>新しいリソースの作成成功</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 204 No Content</h3>
+                    <code>HTTP/1.1 204 No Content</code>
+                    <p>成功したが返すコンテンツなし</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 400 Bad Request</h3>
+                    <code>HTTP/1.1 400 Bad Request</code>
+                    <p>不正なリクエスト。パラメータエラー</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 401 Unauthorized</h3>
+                    <code>HTTP/1.1 401 Unauthorized</code>
+                    <p>認証が必要。認証情報なしまたは無効</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 403 Forbidden</h3>
+                    <code>HTTP/1.1 403 Forbidden</code>
+                    <p>アクセス禁止。権限不足</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 404 Not Found</h3>
+                    <code>HTTP/1.1 404 Not Found</code>
+                    <p>リソースが見つからない</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 422 Unprocessable Entity</h3>
+                    <code>HTTP/1.1 422 Unprocessable Entity</code>
+                    <p>検証エラー。データは正しいが処理できない</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 500 Internal Server Error</h3>
+                    <code>HTTP/1.1 500 Internal Server Error</code>
+                    <p>サーバー内部エラー</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 502 Bad Gateway</h3>
+                    <code>HTTP/1.1 502 Bad Gateway</code>
+                    <p>ゲートウェイまたはプロキシのエラー</p>
+                </div>
+                <div class="command-card">
+                    <h3>ステータスコード - 503 Service Unavailable</h3>
+                    <code>HTTP/1.1 503 Service Unavailable</code>
+                    <p>サービス利用不可。メンテナンス中など</p>
                 </div>
             </div>
         </section>
