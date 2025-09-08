@@ -139,6 +139,16 @@
                     <code>docker compose exec web bundle exec rubocop -A</code>
                     <p>コードスタイルを自動で修正</p>
                 </div>
+                <div class="command-card">
+                    <h3>MySQLコンテナに接続</h3>
+                    <code>docker exec -it [コンテナ名] mysql -u [ユーザー] -p</code>
+                    <p>実行中のMySQLコンテナに接続してSQL操作</p>
+                </div>
+                <div class="command-card">
+                    <h3>PostgreSQLコンテナに接続</h3>
+                    <code>docker exec -it [コンテナ名] psql -U [ユーザー] -d [DB名]</code>
+                    <p>実行中のPostgreSQLコンテナに接続してSQL操作</p>
+                </div>
             </div>
         </section>
 
@@ -371,6 +381,26 @@
                     <h3>ログ詳細表示</h3>
                     <code>git log</code>
                     <p>コミット履歴を詳細表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>リモートリポジトリ追加</h3>
+                    <code>git remote add [名前] [URL]</code>
+                    <p>新しいリモートリポジトリを登録</p>
+                </div>
+                <div class="command-card">
+                    <h3>リモートURL変更</h3>
+                    <code>git remote set-url [名前] [新しいURL]</code>
+                    <p>既存リモートのURLを変更</p>
+                </div>
+                <div class="command-card">
+                    <h3>ブランチをプッシュ</h3>
+                    <code>git push [リモート名] [ブランチ名]</code>
+                    <p>指定したブランチをリモートにプッシュ</p>
+                </div>
+                <div class="command-card">
+                    <h3>ブランチをプル</h3>
+                    <code>git pull [リモート名] [ブランチ名]</code>
+                    <p>指定したブランチをリモートからプル</p>
                 </div>
             </div>
         </section>
