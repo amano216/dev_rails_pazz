@@ -417,6 +417,61 @@
                     <code>git push origin --delete [ブランチ名]</code>
                     <p>リモートリポジトリのブランチを削除</p>
                 </div>
+                <div class="command-card">
+                    <h3>全ブランチ一覧</h3>
+                    <code>git branch -a</code>
+                    <p>リモートを含む全ブランチを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ブランチ作成</h3>
+                    <code>git branch [ブランチ名]</code>
+                    <p>新しいブランチを作成（切替はなし）</p>
+                </div>
+                <div class="command-card">
+                    <h3>特定ファイル追加</h3>
+                    <code>git add [ファイル名]</code>
+                    <p>指定したファイルのみステージング</p>
+                </div>
+                <div class="command-card">
+                    <h3>グラフ形式ログ</h3>
+                    <code>git log --oneline --graph</code>
+                    <p>履歴をグラフ形式で一行表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コミットまで戻す</h3>
+                    <code>git reset [コミット]</code>
+                    <p>指定コミットまで変更を戻す（--soft, --mixed, --hard）</p>
+                </div>
+                <div class="command-card">
+                    <h3>コミット打ち消し</h3>
+                    <code>git revert [コミット]</code>
+                    <p>指定コミットの変更を打ち消すコミットを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>直前コミット修正</h3>
+                    <code>git commit --amend</code>
+                    <p>直前のコミットを修正（メッセージやファイル追加）</p>
+                </div>
+                <div class="command-card">
+                    <h3>スタッシュ一覧</h3>
+                    <code>git stash list</code>
+                    <p>一時保存した変更の一覧を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コミット取り込み</h3>
+                    <code>git cherry-pick [コミットID]</code>
+                    <p>別のブランチから特定のコミットを取り込む</p>
+                </div>
+                <div class="command-card">
+                    <h3>タグ付け</h3>
+                    <code>git tag [タグ名]</code>
+                    <p>特定のコミットにバージョン等のタグを付ける</p>
+                </div>
+                <div class="command-card">
+                    <h3>タグをプッシュ</h3>
+                    <code>git push origin [タグ名]</code>
+                    <p>作成したタグをリモートに送信</p>
+                </div>
             </div>
         </section>
 
