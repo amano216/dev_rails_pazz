@@ -30,7 +30,6 @@
             <li><a href="#testing" data-category="testing">🧪 テスト</a></li>
             <li><a href="#performance" data-category="performance">⚡ パフォーマンス</a></li>
             <li><a href="#errors" data-category="errors">🚨 エラーパターン</a></li>
-            <li><a href="#linux-git" data-category="linux-git">🔄 Linux/Git対応表</a></li>
             <li><a href="#http" data-category="http">🌐 HTTPメソッド</a></li>
         </ul>
     </nav>
@@ -271,6 +270,146 @@
                     <code>ps aux</code>
                     <p>実行中のプロセス一覧</p>
                 </div>
+                <div class="command-card">
+                    <h3>差分表示</h3>
+                    <code>diff [ファイル1] [ファイル2]</code>
+                    <p>2つのファイル間の差分を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>空ファイル作成</h3>
+                    <code>touch [ファイル名]</code>
+                    <p>ファイルのタイムスタンプを更新、または空ファイルを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>空ディレクトリ削除</h3>
+                    <code>rmdir [ディレクトリ名]</code>
+                    <p>中身が空のディレクトリを削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル先頭表示</h3>
+                    <code>head [ファイル名]</code>
+                    <p>ファイルの先頭部分を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル末尾表示</h3>
+                    <code>tail [ファイル名]</code>
+                    <p>ファイルの末尾部分を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>単語・行数カウント</h3>
+                    <code>wc [ファイル名]</code>
+                    <p>ファイル内の行数、単語数、バイト数をカウント</p>
+                </div>
+                <div class="command-card">
+                    <h3>テキストソート</h3>
+                    <code>sort [ファイル名]</code>
+                    <p>テキストファイルの行をソート</p>
+                </div>
+                <div class="command-card">
+                    <h3>重複行の削除</h3>
+                    <code>uniq [ファイル名]</code>
+                    <p>ソート済みファイルから重複する行を削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>所有者変更</h3>
+                    <code>chown [所有者] [ファイル]</code>
+                    <p>ファイルやディレクトリの所有者を変更</p>
+                </div>
+                <div class="command-card">
+                    <h3>アーカイブ作成</h3>
+                    <code>tar -cvf [archive.tar] [ファイル]</code>
+                    <p>複数のファイルを一つのアーカイブにまとめる</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル圧縮</h3>
+                    <code>gzip [ファイル名]</code>
+                    <p>ファイルを圧縮（.gz）</p>
+                </div>
+                <div class="command-card">
+                    <h3>プロセス終了</h3>
+                    <code>kill [プロセスID]</code>
+                    <p>指定したプロセスを終了させる</p>
+                </div>
+                <div class="command-card">
+                    <h3>テキスト出力</h3>
+                    <code>echo "テキスト"</code>
+                    <p>指定した文字列や変数の内容を標準出力に表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>環境変数設定</h3>
+                    <code>export VAR=value</code>
+                    <p>環境変数を設定またはエクスポート</p>
+                </div>
+                <div class="command-card">
+                    <h3>エイリアス設定</h3>
+                    <code>alias name='command'</code>
+                    <p>コマンドの別名を定義</p>
+                </div>
+                <div class="command-card">
+                    <h3>コマンド履歴</h3>
+                    <code>history</code>
+                    <p>実行したコマンドの履歴を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>マニュアル表示</h3>
+                    <code>man [コマンド]</code>
+                    <p>コマンドのマニュアルページを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コマンドパス表示</h3>
+                    <code>which [コマンド]</code>
+                    <p>コマンドの実行ファイルの場所を特定</p>
+                </div>
+                <div class="command-card">
+                    <h3>日時表示</h3>
+                    <code>date</code>
+                    <p>現在の日付と時刻を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ログインユーザー表示</h3>
+                    <code>who</code>
+                    <p>現在システムにログインしているユーザーの一覧を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ディスク使用量</h3>
+                    <code>df -h</code>
+                    <p>ディスクの空き容量と使用状況を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイルサイズ表示</h3>
+                    <code>du -h [ファイル/ディレクトリ]</code>
+                    <p>ファイルやディレクトリのディスク使用量を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイルシステムのマウント</h3>
+                    <code>mount</code>
+                    <p>ファイルシステムをマウント（接続）する</p>
+                </div>
+                <div class="command-card">
+                    <h3>アンマウント</h3>
+                    <code>umount [デバイス]</code>
+                    <p>マウントされたファイルシステムを解除</p>
+                </div>
+                <div class="command-card">
+                    <h3>シンボリックリンク作成</h3>
+                    <code>ln -s [元] [リンク名]</code>
+                    <p>ファイルやディレクトリへのシンボリックリンクを作成</p>
+                </div>
+                <div class="command-card">
+                    <h3>ストリームエディタ</h3>
+                    <code>sed 's/old/new/g' [ファイル]</code>
+                    <p>テキストの置換や削除などの編集を行う</p>
+                </div>
+                <div class="command-card">
+                    <h3>テキスト処理</h3>
+                    <code>awk '{print $1}' [ファイル]</code>
+                    <p>テキストを行ごとに処理する強力なプログラミング言語</p>
+                </div>
+                <div class="command-card">
+                    <h3>フィールド抽出</h3>
+                    <code>cut -f1 -d',' [ファイル]</code>
+                    <p>テキストの各行からフィールドを抽出</p>
+                </div>
             </div>
         </section>
 
@@ -471,6 +610,146 @@
                     <h3>タグをプッシュ</h3>
                     <code>git push origin [タグ名]</code>
                     <p>作成したタグをリモートに送信</p>
+                </div>
+                <div class="command-card">
+                    <h3>管理ファイル一覧</h3>
+                    <code>git ls-files</code>
+                    <p>Gitが管理しているファイルの一覧を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル削除</h3>
+                    <code>git rm [ファイル名]</code>
+                    <p>ファイルをリポジトリとワーキングツリーから削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>ファイル移動</h3>
+                    <code>git mv [元] [先]</code>
+                    <p>ファイルの移動またはリネームを記録</p>
+                </div>
+                <div class="command-card">
+                    <h3>リポジトリ内検索</h3>
+                    <code>git grep [パターン]</code>
+                    <p>管理下のファイルから指定パターンを検索</p>
+                </div>
+                <div class="command-card">
+                    <h3>オブジェクト内容表示</h3>
+                    <code>git show [コミット/タグ]</code>
+                    <p>コミットやタグなどのオブジェクト情報を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>リポジトリルート表示</h3>
+                    <code>git rev-parse --show-toplevel</code>
+                    <p>リポジトリのトップレベルディレクトリのパスを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コミットメッセージ検索</h3>
+                    <code>git log --grep="[パターン]"</code>
+                    <p>コミットメッセージからパターンを検索</p>
+                </div>
+                <div class="command-card">
+                    <h3>最新コミット表示</h3>
+                    <code>git log -n [数]</code>
+                    <p>指定した数だけ最新のコミットを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>古い順にログ表示</h3>
+                    <code>git log --reverse</code>
+                    <p>コミット履歴を古いものから順に表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コミット数統計</h3>
+                    <code>git shortlog -sn</code>
+                    <p>コントリビューター毎のコミット数を集計して表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>日付順ログ</h3>
+                    <code>git log --date-order</code>
+                    <p>コミットを日付順にソートして表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>マージコミット除外</h3>
+                    <code>git log --no-merges</code>
+                    <p>マージコミットをログ表示から除外</p>
+                </div>
+                <div class="command-card">
+                    <h3>実行権限変更</h3>
+                    <code>git update-index --chmod=+x [ファイル]</code>
+                    <p>ファイルの実行権限をGitに記録</p>
+                </div>
+                <div class="command-card">
+                    <h3>ユーザー名設定</h3>
+                    <code>git config user.name "名前"</code>
+                    <p>コミットに使用するユーザー名を設定</p>
+                </div>
+                <div class="command-card">
+                    <h3>アーカイブ作成</h3>
+                    <code>git archive --format=zip HEAD -o file.zip</code>
+                    <p>リポジトリの内容をzipなどのアーカイブ形式で出力</p>
+                </div>
+                <div class="command-card">
+                    <h3>リポジトリ最適化</h3>
+                    <code>git gc</code>
+                    <p>不要なオブジェクトを削除しリポジトリを最適化</p>
+                </div>
+                <div class="command-card">
+                    <h3>グローバル設定</h3>
+                    <code>git config --global user.name "名前"</code>
+                    <p>システム全体に適用されるGit設定を行う</p>
+                </div>
+                <div class="command-card">
+                    <h3>エイリアス設定</h3>
+                    <code>git config --global alias.st status</code>
+                    <p>Gitコマンドの短縮形（エイリアス）を設定</p>
+                </div>
+                <div class="command-card">
+                    <h3>参照履歴表示</h3>
+                    <code>git reflog</code>
+                    <p>HEADやブランチの移動履歴を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>ヘルプ表示</h3>
+                    <code>git help [コマンド]</code>
+                    <p>指定したGitコマンドのヘルプドキュメントを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>実行パス表示</h3>
+                    <code>git --exec-path</code>
+                    <p>Gitの内部コマンドが配置されているパスを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>日付指定ログ</h3>
+                    <code>git log --date=iso</code>
+                    <p>ログの日付フォーマットを指定して表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>コントリビューター表示</h3>
+                    <code>git shortlog</code>
+                    <p>コントリビューターのコミット概要を表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>オブジェクト数表示</h3>
+                    <code>git count-objects -v</code>
+                    <p>リポジトリ内のオブジェクト数やサイズを表示</p>
+                </div>
+                <div class="command-card">
+                    <h3>強力な最適化</h3>
+                    <code>git gc --aggressive</code>
+                    <p>より強力なリポジトリの最適化を実行</p>
+                </div>
+                <div class="command-card">
+                    <h3>リモートリポジトリ削除</h3>
+                    <code>git remote remove [名前]</code>
+                    <p>登録されているリモートリポジトリを削除</p>
+                </div>
+                <div class="command-card">
+                    <h3>履歴の書き換え</h3>
+                    <code>git filter-branch --tree-filter 'rm -f passwords.txt' HEAD</code>
+                    <p>全コミット履歴に対してスクリプトを実行し履歴を書き換え</p>
+                </div>
+                <div class="command-card">
+                    <h3>ログフォーマット指定</h3>
+                    <code>git log --format="%h - %an, %ar : %s"</code>
+                    <p>ログの出力フォーマットをカスタマイズ</p>
                 </div>
             </div>
         </section>
@@ -1361,212 +1640,6 @@
                     <h3>StandardError - カスタムエラー処理</h3>
                     <code>rescue StandardError => e</code>
                     <p>汎用的なエラーキャッチ。ログ出力して適切に処理</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="linux-git" class="category">
-            <h2>🔄 Linux/Git コマンド対応表</h2>
-            <div class="commands-grid">
-                <div class="command-card">
-                    <h3>ファイル一覧表示</h3>
-                    <code>ls → git ls-files</code>
-                    <p>Linuxのlsはディレクトリ内容を表示、GitはGit管理下のファイル一覧</p>
-                </div>
-                <div class="command-card">
-                    <h3>ファイル削除</h3>
-                    <code>rm → git rm</code>
-                    <p>Linuxは物理削除、Gitは削除をステージング</p>
-                </div>
-                <div class="command-card">
-                    <h3>ファイル移動・リネーム</h3>
-                    <code>mv → git mv</code>
-                    <p>Linuxはファイル移動、Gitは移動履歴を追跡</p>
-                </div>
-                <div class="command-card">
-                    <h3>差分表示</h3>
-                    <code>diff → git diff</code>
-                    <p>Linuxはファイル間差分、Gitは変更差分を表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>パターン検索</h3>
-                    <code>grep → git grep</code>
-                    <p>Linuxは全ファイル検索、GitはGit管理下のファイル検索</p>
-                </div>
-                <div class="command-card">
-                    <h3>ファイル内容表示</h3>
-                    <code>cat → git show</code>
-                    <p>Linuxは現在の内容、Gitは特定コミットの内容表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>ファイル作成・追加</h3>
-                    <code>touch → git add</code>
-                    <p>Linuxは空ファイル作成、Gitはステージングに追加</p>
-                </div>
-                <div class="command-card">
-                    <h3>コピー操作</h3>
-                    <code>cp → git cherry-pick</code>
-                    <p>Linuxはファイルコピー、Gitは特定コミットを適用</p>
-                </div>
-                <div class="command-card">
-                    <h3>ディレクトリ移動</h3>
-                    <code>cd → git checkout</code>
-                    <p>Linuxはディレクトリ移動、Gitはブランチ切り替え</p>
-                </div>
-                <div class="command-card">
-                    <h3>現在位置表示</h3>
-                    <code>pwd → git rev-parse --show-toplevel</code>
-                    <p>Linuxは現在ディレクトリ、Gitはリポジトリルート表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>ディレクトリ作成</h3>
-                    <code>mkdir → git init</code>
-                    <p>Linuxは通常ディレクトリ、Gitはリポジトリ初期化</p>
-                </div>
-                <div class="command-card">
-                    <h3>ディレクトリ削除</h3>
-                    <code>rmdir → git branch -d</code>
-                    <p>Linuxは空ディレクトリ削除、Gitはブランチ削除</p>
-                </div>
-                <div class="command-card">
-                    <h3>ファイル検索</h3>
-                    <code>find → git log --grep</code>
-                    <p>Linuxはファイル名検索、Gitはコミットメッセージ検索</p>
-                </div>
-                <div class="command-card">
-                    <h3>先頭部分表示</h3>
-                    <code>head → git log -n</code>
-                    <p>Linuxはファイル先頭、Gitは最新コミット表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>末尾部分表示</h3>
-                    <code>tail → git log --reverse</code>
-                    <p>Linuxはファイル末尾、Gitは古いコミットから表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>カウント統計</h3>
-                    <code>wc → git shortlog -sn</code>
-                    <p>Linuxは行数カウント、Gitはコミット数統計</p>
-                </div>
-                <div class="command-card">
-                    <h3>ソート操作</h3>
-                    <code>sort → git log --date-order</code>
-                    <p>Linuxはテキストソート、Gitは日付順にソート</p>
-                </div>
-                <div class="command-card">
-                    <h3>重複除去</h3>
-                    <code>uniq → git log --no-merges</code>
-                    <p>Linuxは重複行削除、Gitはマージコミット除外</p>
-                </div>
-                <div class="command-card">
-                    <h3>権限変更</h3>
-                    <code>chmod → git update-index --chmod</code>
-                    <p>Linuxはファイル権限、Gitは実行権限の記録</p>
-                </div>
-                <div class="command-card">
-                    <h3>所有者設定</h3>
-                    <code>chown → git config user.name</code>
-                    <p>Linuxはファイル所有者、Gitはコミット作者設定</p>
-                </div>
-                <div class="command-card">
-                    <h3>アーカイブ作成</h3>
-                    <code>tar → git archive</code>
-                    <p>Linuxは複数ファイル圧縮、Gitはリポジトリアーカイブ</p>
-                </div>
-                <div class="command-card">
-                    <h3>圧縮操作</h3>
-                    <code>gzip → git gc</code>
-                    <p>Linuxはファイル圧縮、Gitはリポジトリ最適化</p>
-                </div>
-                <div class="command-card">
-                    <h3>プロセス状態表示</h3>
-                    <code>ps → git status</code>
-                    <p>Linuxはプロセス一覧、Gitは作業状態表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>強制終了</h3>
-                    <code>kill → git reset --hard</code>
-                    <p>Linuxはプロセス終了、Gitは変更を強制破棄</p>
-                </div>
-                <div class="command-card">
-                    <h3>メッセージ出力</h3>
-                    <code>echo → git commit -m</code>
-                    <p>Linuxはテキスト出力、Gitはコミットメッセージ</p>
-                </div>
-                <div class="command-card">
-                    <h3>環境変数設定</h3>
-                    <code>export → git config --global</code>
-                    <p>Linuxは環境変数、Gitはグローバル設定</p>
-                </div>
-                <div class="command-card">
-                    <h3>エイリアス設定</h3>
-                    <code>alias → git config alias</code>
-                    <p>Linuxはコマンド別名、Gitはgitコマンドの短縮形</p>
-                </div>
-                <div class="command-card">
-                    <h3>履歴表示</h3>
-                    <code>history → git reflog</code>
-                    <p>Linuxはコマンド履歴、Gitは参照履歴</p>
-                </div>
-                <div class="command-card">
-                    <h3>マニュアル表示</h3>
-                    <code>man → git help</code>
-                    <p>Linuxはマニュアル、Gitはヘルプドキュメント</p>
-                </div>
-                <div class="command-card">
-                    <h3>コマンドパス表示</h3>
-                    <code>which → git --exec-path</code>
-                    <p>Linuxはコマンドの場所、Gitは実行ファイルパス</p>
-                </div>
-                <div class="command-card">
-                    <h3>日時表示</h3>
-                    <code>date → git log --date</code>
-                    <p>Linuxは現在時刻、Gitはコミット日時表示</p>
-                </div>
-                <div class="command-card">
-                    <h3>ユーザー情報表示</h3>
-                    <code>who → git shortlog</code>
-                    <p>Linuxはログインユーザー、Gitはコミッター一覧</p>
-                </div>
-                <div class="command-card">
-                    <h3>ディスク使用量</h3>
-                    <code>df → git count-objects</code>
-                    <p>Linuxはディスク容量、Gitはオブジェクト数</p>
-                </div>
-                <div class="command-card">
-                    <h3>サイズ計算</h3>
-                    <code>du → git gc --aggressive</code>
-                    <p>Linuxはディレクトリサイズ、Gitは積極的な最適化</p>
-                </div>
-                <div class="command-card">
-                    <h3>マウント操作</h3>
-                    <code>mount → git remote add</code>
-                    <p>Linuxはファイルシステム、Gitはリモート追加</p>
-                </div>
-                <div class="command-card">
-                    <h3>アンマウント操作</h3>
-                    <code>umount → git remote remove</code>
-                    <p>Linuxはマウント解除、Gitはリモート削除</p>
-                </div>
-                <div class="command-card">
-                    <h3>リンク作成</h3>
-                    <code>ln → git tag</code>
-                    <p>Linuxはシンボリックリンク、Gitはタグ付け</p>
-                </div>
-                <div class="command-card">
-                    <h3>ストリーム編集</h3>
-                    <code>sed → git filter-branch</code>
-                    <p>Linuxはテキスト置換、Gitは履歴の書き換え</p>
-                </div>
-                <div class="command-card">
-                    <h3>パターン処理</h3>
-                    <code>awk → git log --format</code>
-                    <p>Linuxはテキスト処理、Gitはログフォーマット</p>
-                </div>
-                <div class="command-card">
-                    <h3>フィールド抽出</h3>
-                    <code>cut → git log --oneline</code>
-                    <p>Linuxは列抽出、Gitは簡潔なログ表示</p>
                 </div>
             </div>
         </section>
