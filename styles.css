@@ -236,3 +236,76 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
     background: #5a3785;
 }
+
+/* --- Tutorial Card Styles --- */
+.tutorial-card {
+    background: #fdfdff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    border-left: 5px solid #667eea;
+}
+
+.tutorial-card h3 {
+    color: #667eea;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tutorial-card p, .tutorial-card li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.tutorial-card ol {
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.tutorial-card ol li {
+    margin-bottom: 12px;
+}
+
+.tutorial-card code {
+    background: #e9eaf7;
+    color: #667eea;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.tutorial-card a code {
+    transition: all 0.3s;
+}
+
+.tutorial-card a:hover code {
+    background: #667eea;
+    color: white;
+}
+
+.tutorial-card .prerequisites {
+    background: #f7f7f9;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.tutorial-card .prerequisites h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #764ba2;
+}
+
+.tutorial-card hr {
+    border: 0;
+    height: 1px;
+    background-color: #e8e8e8;
+    margin: 25px 0;
+}
