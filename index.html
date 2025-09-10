@@ -19,22 +19,24 @@
             <li><a href="#tutorial-setup" data-category="tutorial-setup">🚀 環境構築チュートリアル</a></li>
             <li><a href="#tutorial-feature" data-category="tutorial-feature">🌱 新機能開発チュートリアル</a></li>
             <li><a href="#tutorial-debug" data-category="tutorial-debug">🐛 デバッグチュートリアル</a></li>
+            <li><a href="#tutorial-migration" data-category="tutorial-migration">🗄️ DBマイグレーション管理</a></li>
+            <li><a href="#tutorial-git-combo" data-category="tutorial-git-combo">🤝 Git合わせ技</a></li>
             <li style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid #ddd;"></li>
-            <li><a href="#docker" data-category="docker">🐳 Docker リファレンス</a></li>
-            <li><a href="#gem" data-category="gem">💎 Gem リファレンス</a></li>
-            <li><a href="#linux" data-category="linux">🐧 Linux リファレンス</a></li>
-            <li><a href="#git" data-category="git">📦 Git リファレンス</a></li>
-            <li><a href="#github" data-category="github">🐙 GitHub リファレンス</a></li>
-            <li><a href="#rails" data-category="rails">🛤️ Rails リファレンス</a></li>
-            <li><a href="#ruby" data-category="ruby">💎 Ruby リファレンス</a></li>
-            <li><a href="#gem-library" data-category="gem-library">📚 Gem Libraryリファレンス</a></li>
-            <li><a href="#mvc" data-category="mvc">🏗️ MVC パターンリファレンス</a></li>
-            <li><a href="#debug" data-category="debug">🐛 デバッグリファレンス</a></li>
-            <li><a href="#database" data-category="database">🗄️ データベースリファレンス</a></li>
-            <li><a href="#testing" data-category="testing">🧪 テストリファレンス</a></li>
-            <li><a href="#performance" data-category="performance">⚡ パフォーマンスリファレンス</a></li>
-            <li><a href="#errors" data-category="errors">🚨 エラーパターンリファレンス</a></li>
-            <li><a href="#http" data-category="http">🌐 HTTPリファレンス</a></li>
+            <li><a href="#docker" data-category="docker">🐳 Docker</a></li>
+            <li><a href="#gem" data-category="gem">💎 Gem</a></li>
+            <li><a href="#linux" data-category="linux">🐧 Linux</a></li>
+            <li><a href="#git" data-category="git">📦 Git</a></li>
+            <li><a href="#github" data-category="github">🐙 GitHub</a></li>
+            <li><a href="#rails" data-category="rails">🛤️ Rails</a></li>
+            <li><a href="#ruby" data-category="ruby">💎 Ruby</a></li>
+            <li><a href="#gem-library" data-category="gem-library">📚 Gem Library</a></li>
+            <li><a href="#mvc" data-category="mvc">🏗️ MVC パターン</a></li>
+            <li><a href="#debug" data-category="debug">🐛 デバッグ</a></li>
+            <li><a href="#database" data-category="database">🗄️ データベース</a></li>
+            <li><a href="#testing" data-category="testing">🧪 テスト</a></li>
+            <li><a href="#performance" data-category="performance">⚡ パフォーマンス</a></li>
+            <li><a href="#errors" data-category="errors">🚨 エラーパターン</a></li>
+            <li><a href="#http" data-category="http">🌐 HTTP</a></li>
         </ul>
     </nav>
 
@@ -115,8 +117,94 @@
             </div>
         </section>
 
+        <section id="tutorial-migration" class="category">
+            <h2>🗄️ データベースマイグレーション管理</h2>
+            <div class="tutorial-card">
+                <h3>モデルの追加からデータの投入まで</h3>
+                <p>データベースの構造を変更し、データを管理する際の基本的なマイグレーションフローです。</p>
+                <ol>
+                    <li>
+                        <strong>モデルとマイグレーションファイルの生成:</strong> 新しいテーブルの設計図を作成します。<br>
+                        <a href="#cmd-rails-g-model"><code>rails g model Post title:string content:text</code></a>
+                    </li>
+                    <li>
+                        <strong>データベースへの反映:</strong> 設計図を元に、実際のデータベースにテーブルを作成します。<br>
+                        <a href="#cmd-rails-db-migrate"><code>rails db:migrate</code></a>
+                    </li>
+                    <li>
+                        <strong>適用状態の確認:</strong> どのマイグレーションが適用済みかを確認します。<br>
+                        <a href="#cmd-db-migrate-status"><code>rails db:migrate:status</code></a>
+                    </li>
+                    <li>
+                        <strong>一つ前の状態に戻す:</strong> 直前のマイグレーションを取り消します。<br>
+                        <a href="#cmd-rails-db-rollback"><code>rails db:rollback</code></a>
+                    </li>
+                    <li>
+                        <strong>カラム追加のマイグレーション生成:</strong> 既存のテーブルに新しいカラムを追加します。<br>
+                        <a href="#cmd-rails-g-migration"><code>rails g migration AddAuthorToPosts author:string</code></a>
+                    </li>
+                    <li>
+                        <strong>再度データベースへ反映:</strong> 新しいカラムをデータベースに追加します。<br>
+                        <a href="#cmd-rails-db-migrate"><code>rails db:migrate</code></a>
+                    </li>
+                    <li>
+                        <strong>スキーマからのDB再構築:</strong> チームメンバーが追加したマイグレーションをまとめて適用します。<br>
+                        <a href="#cmd-db-schema-load"><code>rails db:schema:load</code></a>
+                    </li>
+                    <li>
+                        <strong>初期データの投入:</strong> 開発に必要な初期データを投入します。<br>
+                        <a href="#cmd-rails-db-seed"><code>rails db:seed</code></a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="tutorial-git-combo" class="category">
+            <h2>🤝 Git合わせ技チュートリアル</h2>
+            <div class="tutorial-card">
+                <h3>よく使うGitコマンドの組み合わせ</h3>
+                <p>実際の開発シーンで頻繁に登場する、複数のGitコマンドを組み合わせたワークフローを紹介します。</p>
+
+                <h4>最新のmainブランチを取り込んでから開発を始める</h4>
+                <ol>
+                    <li>メインブランチに切り替えます: <a href="#cmd-git-checkout"><code>git checkout main</code></a></li>
+                    <li>リモートの最新の状態を取得します: <a href="#cmd-git-pull"><code>git pull</code></a></li>
+                    <li>新しい機能開発用のブランチを作成します: <a href="#cmd-git-checkout-b"><code>git checkout -b new-feature</code></a></li>
+                </ol>
+
+                <h4>作業の区切りでコミットし、リモートに保存する</h4>
+                <ol>
+                    <li>変更の状態を確認します: <a href="#cmd-git-status"><code>git status</code></a></li>
+                    <li>全ての変更をステージングします: <a href="#cmd-git-add-dot"><code>git add .</code></a></li>
+                    <li>変更内容をコミットします: <a href="#cmd-git-commit-m"><code>git commit -m "キリの良い作業完了"</code></a></li>
+                    <li>リモートリポジトリに変更を保存します: <a href="#cmd-git-push"><code>git push origin new-feature</code></a></li>
+                </ol>
+
+                <h4>mainブランチの変更を作業ブランチに取り込む</h4>
+                <ol>
+                    <li>リモートの最新情報を取得します: <a href="#cmd-git-fetch"><code>git fetch origin</code></a></li>
+                    <li>作業ブランチの起点を最新のmainに移動させます: <a href="#cmd-git-rebase"><code>git rebase origin/main</code></a></li>
+                </ol>
+
+                <h4>ローカルでの変更を一旦退避して、別の作業を優先する</h4>
+                <ol>
+                    <li>現在の変更を一時的に退避させます: <a href="#cmd-git-stash"><code>git stash</code></a></li>
+                    <li>(別のブランチで緊急の作業など...)</li>
+                    <li>退避させた変更を元に戻します: <a href="#cmd-git-stash-pop"><code>git stash pop</code></a></li>
+                </ol>
+
+                <h4>直前のコミットに修正を加える</h4>
+                <ol>
+                    <li>(ファイルを追加・修正します)</li>
+                    <li>修正内容をステージングします: <a href="#cmd-git-add-dot"><code>git add .</code></a></li>
+                    <li>直前のコミットに含めて修正します: <a href="#cmd-git-commit-amend"><code>git commit --amend --no-edit</code></a></li>
+                    <li>修正したコミットを強制的にプッシュします: <a href="#cmd-git-push"><code>git push -f origin new-feature</code></a></li>
+                </ol>
+            </div>
+        </section>
+
         <section id="docker" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐳 Docker リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐳 Docker</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-docker-ps">
                     <h3>コンテナ一覧表示</h3>
@@ -237,7 +325,7 @@
         </section>
 
         <section id="gem" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">💎 Gem リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">💎 Gem</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-gem-install">
                     <h3>Gemインストール</h3>
@@ -283,7 +371,7 @@
         </section>
 
         <section id="linux" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐧 Linux リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐧 Linux</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-ls"><h3>ディレクトリ内容表示</h3><code>ls</code><p>現在のディレクトリのファイル一覧</p></div>
                 <div class="command-card" id="cmd-ls-la"><h3>詳細表示</h3><code>ls -la</code><p>隠しファイルを含む詳細情報</p></div>
@@ -330,7 +418,7 @@
             </div>
         </section>
         <section id="git" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">📦 Git リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">📦 Git</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-git-init"><h3>リポジトリ初期化</h3><code>git init</code><p>新しいGitリポジトリを作成</p></div>
                 <div class="command-card" id="cmd-git-init-dir"><h3>特定ディレクトリで初期化</h3><code>git init /tmp/example</code><p>指定したディレクトリに新しいGitリポジトリを作成</p></div>
@@ -402,7 +490,7 @@
             </div>
         </section>
         <section id="github" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐙 GitHub リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐙 GitHub</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-gh-auth-login"><h3>認証</h3><code>gh auth login</code><p>GitHubにログイン</p></div>
                 <div class="command-card" id="cmd-gh-repo-create"><h3>リポジトリ作成</h3><code>gh repo create [名前]</code><p>新しいリポジトリを作成</p></div>
@@ -415,7 +503,7 @@
             </div>
         </section>
         <section id="rails" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🛤️ Rails リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🛤️ Rails</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-rails-new"><h3>新規アプリ作成</h3><code>rails new [アプリ名]</code><p>新しいRailsアプリを作成</p></div>
                 <div class="command-card" id="cmd-rails-server"><h3>サーバー起動</h3><code>rails server</code><p>開発サーバーを起動</p></div>
@@ -427,6 +515,7 @@
                 <div class="command-card" id="cmd-rails-g-model"><h3>モデル生成</h3><code>rails g model [モデル名]</code><p>新しいモデルを生成</p></div>
                 <div class="command-card" id="cmd-rails-g-controller"><h3>コントローラー生成</h3><code>rails g controller [名前]</code><p>新しいコントローラーを生成</p></div>
                 <div class="command-card" id="cmd-rails-g-scaffold"><h3>Scaffold生成</h3><code>rails g scaffold [名前]</code><p>CRUD機能を一括生成</p></div>
+                <div class="command-card" id="cmd-rails-g-migration"><h3>マイグレーション生成</h3><code>rails g migration [名前]</code><p>新しいDBマイグレーションファイルを生成</p></div>
                 <div class="command-card" id="cmd-rails-routes"><h3>ルート確認</h3><code>rails routes</code><p>ルーティング一覧を表示</p></div>
                 <div class="command-card" id="cmd-rails-test"><h3>テスト実行</h3><code>rails test</code><p>テストスイートを実行</p></div>
                 <div class="command-card" id="cmd-rails-assets-precompile"><h3>アセットプリコンパイル</h3><code>rails assets:precompile</code><p>アセットをコンパイル</p></div>
@@ -434,7 +523,7 @@
             </div>
         </section>
         <section id="ruby" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">💎 Ruby リファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">💎 Ruby</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-ruby-array-length"><h3>配列の要素数取得</h3><code>array.length</code><p>配列の要素数を取得</p></div>
                 <div class="command-card" id="cmd-ruby-array-push"><h3>配列への要素追加</h3><code>array.push(element)</code><p>配列の末尾に要素を追加</p></div>
@@ -463,7 +552,7 @@
             </div>
         </section>
         <section id="gem-library" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">📚 Gem Libraryリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">📚 Gem Library</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-gem-devise"><h3>Devise - 認証</h3><code>gem 'devise'</code><p>ユーザー認証機能を提供</p></div>
                 <div class="command-card" id="cmd-gem-sorcery"><h3>Sorcery - 認証</h3><code>gem 'sorcery'</code><p>シンプルな認証機能を提供</p></div>
@@ -492,7 +581,7 @@
             </div>
         </section>
         <section id="mvc" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🏗️ MVC パターンリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🏗️ MVC パターン</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-mvc-model-base"><h3>Model - Active Record基本</h3><code>class User < ApplicationRecord</code><p>データベースとの対話を担当するモデル層</p></div>
                 <div class="command-card" id="cmd-mvc-model-validation"><h3>Model - バリデーション</h3><code>validates :email, presence: true</code><p>データの整合性を保証する検証ルール</p></div>
@@ -517,7 +606,7 @@
             </div>
         </section>
         <section id="debug" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐛 デバッグリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🐛 デバッグ</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-binding-pry"><h3>binding.pry挿入</h3><code>binding.pry</code><p>コードの実行を一時停止してデバッグ</p></div>
                 <div class="command-card" id="cmd-byebug"><h3>byebugデバッガー</h3><code>byebug</code><p>ブレークポイントを設定</p></div>
@@ -534,7 +623,7 @@
             </div>
         </section>
         <section id="database" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🗄️ データベースリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🗄️ データベース</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-db-version"><h3>DB接続確認</h3><code>rails db:version</code><p>現在のDBバージョンを確認</p></div>
                 <div class="command-card" id="cmd-db-reset"><h3>DBリセット</h3><code>rails db:reset</code><p>DBを削除して再作成</p></div>
@@ -551,7 +640,7 @@
             </div>
         </section>
         <section id="testing" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🧪 テストリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🧪 テスト</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-test-all"><h3>全テスト実行</h3><code>rails test</code><p>すべてのテストを実行</p></div>
                 <div class="command-card" id="cmd-test-file"><h3>特定テスト実行</h3><code>rails test test/models/user_test.rb</code><p>特定のテストファイルを実行</p></div>
@@ -568,7 +657,7 @@
             </div>
         </section>
         <section id="performance" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">⚡ パフォーマンスリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">⚡ パフォーマンス</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-perf-includes"><h3>クエリ最適化 - includes</h3><code>User.includes(:posts, :comments)</code><p>N+1問題を防ぐEager Loading</p></div>
                 <div class="command-card" id="cmd-perf-select"><h3>クエリ最適化 - select</h3><code>User.select(:id, :name)</code><p>必要なカラムのみ取得</p></div>
@@ -589,7 +678,7 @@
             </div>
         </section>
         <section id="errors" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🚨 エラーパターンリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🚨 エラーパターン</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-err-nomethod"><h3>NoMethodError</h3><code>undefined method 'name' for nil:NilClass</code><p>nilオブジェクトにメソッドを呼び出し。&.演算子やif文で対処</p></div>
                 <div class="command-card" id="cmd-err-nameerror"><h3>NameError</h3><code>uninitialized constant User</code><p>クラスが定義されていない。ファイル名とクラス名の確認</p></div>
@@ -618,7 +707,7 @@
             </div>
         </section>
         <section id="http" class="category">
-            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🌐 HTTPリファレンス</h2>
+            <h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px;">🌐 HTTP</h2>
             <div class="commands-grid">
                 <div class="command-card" id="cmd-http-get"><h3>GET - データ取得</h3><code>curl -X GET https://api.example.com/users</code><p>サーバーからデータを取得。リソースの読み取り専用</p></div>
                 <div class="command-card" id="cmd-http-post"><h3>POST - データ作成</h3><code>curl -X POST -d '{"name":"John"}' https://api.example.com/users</code><p>新しいリソースを作成。サーバーにデータを送信</p></div>

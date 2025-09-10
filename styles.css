@@ -239,7 +239,7 @@ h1 {
 
 /* --- Tutorial Card Styles --- */
 .tutorial-card {
-    background: #fdfdff;
+    background: white;
     padding: 25px 30px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -258,7 +258,7 @@ h1 {
 .tutorial-card p, .tutorial-card li {
     font-size: 15px;
     line-height: 1.8;
-    color: #444;
+    color: #333;
 }
 
 .tutorial-card ol {
@@ -273,7 +273,7 @@ h1 {
 
 .tutorial-card code {
     background: #e9eaf7;
-    color: #667eea;
+    color: #5a3785;
     padding: 3px 6px;
     border-radius: 5px;
     font-family: 'Courier New', monospace;
@@ -285,7 +285,7 @@ h1 {
 }
 
 .tutorial-card a:hover code {
-    background: #667eea;
+    background: #5a3785;
     color: white;
 }
 
