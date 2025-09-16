@@ -21,6 +21,7 @@
             <li><a href="#tutorial-debug" data-category="tutorial-debug">🐛 デバッグチュートリアル</a></li>
             <li><a href="#tutorial-migration" data-category="tutorial-migration">🗄️ DBマイグレーション管理</a></li>
             <li><a href="#tutorial-git-combo" data-category="tutorial-git-combo">🤝 Git合わせ技</a></li>
+            <li><a href="#tutorial-issue-management" data-category="tutorial-issue-management">🐙 GitHubイシュー管理入門</a></li>
             <li style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid #ddd;"></li>
             <li><a href="#docker" data-category="docker">🐳 Docker</a></li>
             <li><a href="#gem" data-category="gem">💎 Gem</a></li>
@@ -200,6 +201,86 @@
                     <li>直前のコミットに含めて修正します: <a href="#cmd-git-commit-amend"><code>git commit --amend --no-edit</code></a></li>
                     <li>修正したコミットを強制的にプッシュします: <a href="#cmd-git-push"><code>git push -f origin new-feature</code></a></li>
                 </ol>
+            </div>
+        </section>
+
+        <section id="tutorial-issue-management" class="category">
+            <h2>🐙 GitHubイシュー管理入門</h2>
+            <div class="tutorial-card">
+                <h3>イシューラベルの役割と分類</h3>
+                <p>GitHubのイシューは、ラベルを効果的に使うことで、プロジェクトのタスクを効率的に管理できます。ラベルは大きく分けて「種類」「状態」「優先度」の3つの要素で考えると分かりやすくなります。</p>
+
+                <h4>イシュー管理の3要素</h4>
+                <dl style="margin-left: 20px;">
+                    <dt><strong>種類 (Type)</strong></dt>
+                    <dd style="margin-bottom: 10px;">イシューが「何に関するものか」を示します。（例: <code>bug</code>, <code>enhancement</code>, <code>documentation</code>）</dd>
+                    <dt><strong>状態 (Status)</strong></dt>
+                    <dd style="margin-bottom: 10px;">イシューが「どのような状態にあるか」を示します。（例: <code>help wanted</code>, <code>good first issue</code>, <code>wontfix</code>）</dd>
+                    <dt><strong>優先度 (Priority)</strong></dt>
+                    <dd style="margin-bottom: 10px;">イシューが「どれくらい重要か」を示します。（例: <code>high-priority</code>, <code>low-priority</code> ※カスタム作成）</dd>
+                </dl>
+                <p>この3つの要素を意識してラベルを設計・運用することで、チームは各タスクの性質、進捗、重要度を瞬時に把握できます。</p>
+
+                <h4>代表的なラベルの意味と使い方</h4>
+                <p>一般的に使われるGitHubのデフォルトラベルとその用例です。</p>
+
+                <div class="commands-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                    <div class="command-card">
+                        <h3>bug 🐛</h3>
+                        <code>bug</code>
+                        <p><strong>意味:</strong> ソフトウェアの予期せぬ不具合。<br><strong>語源:</strong> コンピュータに入り込んだ虫（bug）が原因で誤作動した逸話から。<br><strong>例文:</strong> "This PR fixes a bug that causes the app to crash."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>documentation 📝</h3>
+                        <code>documentation</code>
+                        <p><strong>意味:</strong> ドキュメントの誤りや改善。<br><strong>語源:</strong> 文書化を意味する "document" から。<br><strong>例文:</strong> "I've opened a documentation issue to add a new section."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>duplicate 👯</h3>
+                        <code>duplicate</code>
+                        <p><strong>意味:</strong> 他のイシューとの重複。<br><strong>語源:</strong> ラテン語の "duplicatus" (二重にした) から。<br><strong>例文:</strong> "This issue is a duplicate of #123."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>enhancement ✨</h3>
+                        <code>enhancement</code>
+                        <p><strong>意味:</strong> 新機能の追加や既存機能の改善。<br><strong>語源:</strong> 価値を高める "enhance" から。<br><strong>例文:</strong> "We've tagged this as an enhancement to improve the UI."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>good first issue 🔰</h3>
+                        <code>good first issue</code>
+                        <p><strong>意味:</strong> 初心者向けの簡単なイシュー。<br><strong>語源:</strong> 「良い最初の課題」という言葉のまま。<br><strong>例文:</strong> "This is a good first issue for new contributors."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>help wanted 🙋</h3>
+                        <code>help wanted</code>
+                        <p><strong>意味:</strong> コミュニティに助けを求めているイシュー。<br><strong>語源:</strong> 「助けが必要」という求人広告のフレーズから。<br><strong>例文:</strong> "This feature is a high priority and labeled help wanted."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>invalid ❌</h3>
+                        <code>invalid</code>
+                        <p><strong>意味:</strong> 無効なイシュー。<br><strong>語源:</strong> ラテン語の "invalidus" (無効な) から。<br><strong>例文:</strong> "This is marked as invalid because the problem cannot be reproduced."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>question ❓</h3>
+                        <code>question</code>
+                        <p><strong>意味:</strong> 質問や議論を目的としたイシュー。<br><strong>語源:</strong> ラテン語の "quaestio" (探求、質問) から。<br><strong>例文:</strong> "I have a question about the project's architecture."</p>
+                    </div>
+                    <div class="command-card">
+                        <h3>wontfix 🤷</h3>
+                        <code>wontfix</code>
+                        <p><strong>意味:</strong> 解決しないと決定されたイシュー。<br><strong>語源:</strong> "will not fix" の略。<br><strong>例文:</strong> "We've decided this issue is wontfix as it's intended behavior."</p>
+                    </div>
+                </div>
+
+                <h4>イシュー駆動開発のプロセス</h4>
+                <p>イシュー管理の3要素は、特に「タスク化」のフェーズで力を発揮します。</p>
+                <ol style="margin-left: 20px; line-height: 1.6;">
+                    <li><strong>イシューの特定:</strong> 問題やアイデアを特定します。</li>
+                    <li><strong>方針・仮説:</strong> 解決策の方向性を考えます。</li>
+                    <li><strong>リスク評価:</strong> 潜在的なリスクを評価します。</li>
+                    <li><strong>タスク化:</strong> イシューを具体的なタスクに落とし込みます。この際に、<strong>種類(Type)</strong>、<strong>優先度(Priority)</strong>、<strong>状態(Status)</strong>のラベルを付けることで、タスクが明確になります。</li>
+                </ol>
+                <p>このようにラベルを適用（Apply labels to this issue）することで、チーム全体がタスクの内容、重要度、進行状況を瞬時に把握できるようになります。</p>
             </div>
         </section>
 
